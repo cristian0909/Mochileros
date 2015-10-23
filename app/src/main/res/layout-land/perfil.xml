@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg16">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView15"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="#DF0101"
+        android:textSize="40dp"
+        android:text="Perfil"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp" />
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="14dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Modifica tus datos y mantenlos actualizados "
+            android:id="@+id/textView16"
+            android:layout_gravity="center_vertical"
+            android:textColor="#fff"
+            android:textSize="17dp"
+            android:layout_marginTop="8dp"/>
+
+
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Editar Perfil"
+            android:id="@+id/button6"
+            android:layout_alignParentRight="true"
+            android:onClick="editperfilOnClick"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="14dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Protege tu cuenta y cambia tu clave cuando lo desees"
+        android:id="@+id/textView17"
+        android:layout_gravity="left"
+        android:textColor="#fff"
+        android:layout_marginTop="8dp"
+        />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Cambiar Clave"
+        android:id="@+id/button8"
+        android:layout_alignParentRight="true"
+        android:onClick="cambclaveOnClick"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="14dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Eliminacion de cuenta permanentemente"
+        android:id="@+id/textView18"
+        android:layout_gravity="left"
+        android:textColor="#fff"
+        android:layout_marginTop="8dp"
+        />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Eliminar Cuenta"
+        android:id="@+id/button9"
+        android:layout_alignParentRight="true"
+        android:onClick="EliminacionCuenta"
+        />
+    </RelativeLayout>
+</LinearLayout>

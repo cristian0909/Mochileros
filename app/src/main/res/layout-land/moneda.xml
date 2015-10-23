@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg17">
+
+
+    <TextView
+        android:layout_width="319dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView32"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="#DF0101"
+        android:textSize="35dp"
+        android:text="Conversor de monedas"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+
+        />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#802E2E2E"
+        android:layout_gravity="left">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_gravity="left"
+        android:layout_marginLeft="20dp"
+        >
+
+    <RadioGroup
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:id="@+id/rg"
+        android:background="#80FFFFFF"
+        android:padding="10dp"
+        >
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dolar"
+            android:textSize="25dp"
+            android:id="@+id/rbdolar"
+            android:layout_marginBottom="10dp"
+            android:textColor="#000"
+
+            />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Euro"
+            android:textSize="25dp"
+            android:id="@+id/rbeuro"
+            android:layout_marginBottom="10dp"
+            android:textColor="#000"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Real"
+            android:textSize="25dp"
+            android:id="@+id/rbreal"
+            android:textColor="#000"/>
+
+    </RadioGroup>
+
+    </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+        <EditText
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:id="@+id/cantidad"
+           android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:inputType="number"
+            android:textColor="#000"
+            android:gravity="center"
+            android:background="@drawable/borde"
+             />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text=""
+            android:id="@+id/txtvalor"
+            android:layout_marginTop="30dp"
+            android:textColor="#FFF"
+            android:textSize="30dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+
+            />
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="170dp"
+                android:layout_height="50dp"
+                android:text="Convertir"
+                android:id="@+id/button15"
+                android:textSize="20dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="0dp"
+                android:onClick="calOnClick"/>
+
+
+    </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+</LinearLayout>

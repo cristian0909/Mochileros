@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg16">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView25"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#DF0101"
+        android:textSize="40dp"
+        android:text="Cambiar Clave "
+        android:layout_marginBottom="20dp" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+        android:background="#802E2E2E"
+        android:layout_centerHorizontal="true"
+        android:paddingLeft="5dp"
+        android:layout_margin="17dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ingrese su clave actual"
+        android:id="@+id/textView26"
+        android:layout_gravity="left"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:textSize="23dp"
+        android:textColor="#fff"
+        android:textStyle="bold"
+
+        android:layout_marginBottom="10dp"/>
+
+    <EditText
+        android:layout_width="196dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/clave_actual"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:textSize="23dp"
+        android:textColor="#fff"
+        android:background="#80F2F2F2"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ingrese nueva clave"
+        android:id="@+id/textView27"
+        android:layout_gravity="left"
+        android:layout_marginLeft="10dp"
+        android:textSize="23dp"
+        android:layout_marginBottom="10dp"
+        android:textStyle="bold"
+        android:textColor="#fff"
+        />
+
+    <EditText
+        android:layout_width="196dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/clave_nueva"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:textSize="23dp"
+        android:textColor="#fff"
+        android:background="#80F2F2F2"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Repita su nueva clave"
+        android:id="@+id/textView28"
+        android:layout_gravity="left"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"
+        android:textSize="23dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="#fff"/>
+
+    <EditText
+        android:layout_width="196dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/rep_clave"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:textSize="23dp"
+        android:textColor="#fff"
+        android:background="#80F2F2F2"
+
+        />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Actualizar Contraseña"
+        android:id="@+id/button10"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="15dp"
+        android:onClick="cambclavOnClick"/>
+        </LinearLayout>
+
+</LinearLayout>

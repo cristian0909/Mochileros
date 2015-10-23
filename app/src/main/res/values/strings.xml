@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Mochileros</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="consejoInicial">Planifica tu viaje, te ayudara a tomar buenas decisiones y maximizar tus recursos</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="consejo1">Para realizar un viaje seguro se debe usar una vestimenta apropiada para la ocupación: para ello debes visitar la siguiente pagina: </string>
+    <string name="consejo2">No tengas problemas con el equipamiento de tu viaje, para ello visita la siguiente página</string>
+     <string name="doite">No tengas problemas con el equipamiento de tu viaje, para ello visita la siguiente página</string>
+    <string name="title_activity_lateral">LateralActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+
+</resources>

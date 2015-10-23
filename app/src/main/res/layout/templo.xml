@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lineafondo"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg1">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Lugar"
+        android:textSize="30dp"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/lugar"
+        android:layout_marginBottom="0dp"
+        android:textColor="#fff"
+
+         />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_margin="5dp"
+        android:background="#80848484"
+
+        android:paddingLeft="10dp"
+
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Valoracion:"
+            android:textSize="20dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="17dp"
+
+            android:textColor="#fff"
+            />
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/starta1"
+            android:layout_marginTop="17dp"
+            android:background="@drawable/estrella1"
+
+            />
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/starta2"
+            android:layout_marginTop="17dp"
+            android:background="@drawable/estrella1"
+
+            />
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/starta3"
+            android:layout_marginTop="17dp"
+            android:background="@drawable/estrella1"
+
+            />
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/starta4"
+            android:layout_marginTop="17dp"
+            android:background="@drawable/estrella1"
+
+            />
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/starta5"
+            android:layout_marginTop="17dp"
+            android:background="@drawable/estrella0"
+
+            />
+
+
+            />
+
+    </LinearLayout>
+
+         <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="#80848484"
+        android:layout_marginBottom="9dp"
+
+        android:paddingLeft="10dp"
+
+        >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="ingresar\nvaloracion"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:id="@+id/popularidad"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+
+        android:textColor="#fff"
+        />
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/start1"
+            android:layout_marginTop="17dp"
+
+
+            />
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/start2"
+            android:layout_marginTop="17dp"
+
+            />
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/start3"
+            android:layout_marginTop="17dp"
+
+            />
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/start4"
+            android:layout_marginTop="17dp"
+
+            />
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/start5"
+            android:layout_marginTop="17dp"
+
+            />
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/mas"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="7dp"
+            android:background="@drawable/mas"
+            android:onClick="masOnClick"
+
+
+            />
+
+</LinearLayout>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ingresar valoración"
+        android:id="@+id/ingvaloracion"
+        android:layout_gravity="center_horizontal"
+        android:onClick="ingresarvaloracionOnClick"
+        />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="30dp"
+        >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Comentarios"
+        android:textSize="30dp"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:id="@+id/comentario"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#fff"
+
+        />
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/imageButton"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/comentario1"
+            android:layout_marginLeft="50dp"
+            android:onClick="igresoComentarioOnClick"/>
+
+        <Button
+            android:layout_width="75dp"
+            android:layout_height="40dp"
+            android:text="Enviar"
+            android:id="@+id/enviarcomentario"
+            android:layout_marginLeft="10dp"
+            android:onClick="enviarComentarioOnClick"
+            />
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/scrollView"
+        android:layout_gravity="center_horizontal" >
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/edcomentario"
+                android:layout_gravity="center_horizontal"
+                android:visibility="gone"
+                android:padding="5dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp"
+                android:layout_marginBottom="5dp"
+                />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/textView33"
+            android:text="Muy buena la wea por la xuxa"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/comentarios1"
+            android:padding="5dp"/>
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/textView34"
+            android:text="Agradable citio, todo muy tranquilo"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/comentarios1"
+            android:padding="5dp"/>
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/textView35"
+            android:text="Comentario 1"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/comentarios1"
+            android:padding="5dp"/>
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Comentario 1"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/comentarios1"
+            android:padding="5dp"
+            />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Comentario 1"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/comentarios1"
+                android:padding="5dp"
+                />
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Comentario 1"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/comentarios1"
+                android:padding="5dp"
+                />
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Comentario 1"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/comentarios1"
+                android:padding="5dp"
+                />
+
+
+
+            <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Comentario 1"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="3dp"
+                android:background="@drawable/comentarios1"
+                android:padding="5dp"
+            />
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Comentario 1"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="3dp"
+                android:background="@drawable/comentarios1"
+                android:padding="5dp"
+                />
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/bg8"
+    android:id="@+id/h">
+
+
+    <ImageView
+        android:layout_width="280dp"
+        android:layout_height="110dp"
+        android:layout_centerHorizontal="true"
+        android:shadowColor="#DF0101"
+        android:src="@drawable/mo"
+        android:id="@+id/imgvlogo" />
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:layout_marginTop="150dp"
+
+        android:layout_centerHorizontal="true"
+        android:id="@+id/frameLayout">
+
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:text="Mapa"
+            android:layout_marginLeft="30dp"
+            android:id="@+id/button4"
+            android:layout_gravity="left|top"
+            android:onClick="mapaOnClick"
+            android:background="#CCD8D8D8"
+            />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:text="Favoritos"
+            android:id="@+id/bt_favorito"
+            android:layout_gravity="right|top"
+            android:layout_marginRight="30dp"
+            android:onClick="favOnClick"
+            android:background="#CCD8D8D8"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:text="Perfil"
+            android:id="@+id/button5"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="30dp"
+            android:onClick="perfilOnClick"
+            android:background="#CCD8D8D8"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:text="Consejos"
+            android:id="@+id/button7"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="30dp"
+            android:onClick="consejosOnClick"
+            android:background="#CCD8D8D8"
+            />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:text="Climas"
+            android:id="@+id/button13"
+            android:layout_gravity="left|bottom"
+            android:layout_marginLeft="30dp"
+            android:onClick="climaOnClick"
+            android:background="#CCD8D8D8" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:text="Monedas $"
+            android:id="@+id/button14"
+            android:layout_gravity="right|bottom"
+            android:layout_marginRight="30dp"
+            android:onClick="monedaOnClick"
+            android:background="#CCD8D8D8" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="17dp"
+        android:paddingTop="20dp"
+        android:layout_below="@+id/frameLayout">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Banner Publicitario"
+            android:textSize="35dp"
+            android:id="@+id/textView10"
+            android:textColor="#40FF00"
+            android:textStyle="italic"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+
+
+</RelativeLayout></LinearLayout>
