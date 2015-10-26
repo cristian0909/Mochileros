@@ -56,8 +56,7 @@ public class MapsActivity extends android.support.v4.app.FragmentActivity {
     Location location=null;
     GPSTracker gps;
     Button btn_Abrir_Popup;
-    Button btn_Cerrar, remover;
-
+    Button  remover;
     LayoutInflater layoutInflater;
     View popupView;
     PopupWindow popupWindow;
@@ -70,6 +69,7 @@ public class MapsActivity extends android.support.v4.app.FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
         mMap = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map)).getMap();
+        Map = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map)).getMap();
 
         mMap.setOnMapClickListener(new OnMapClickListener() {
             public void onMapClick(LatLng point) {
@@ -113,7 +113,7 @@ public class MapsActivity extends android.support.v4.app.FragmentActivity {
 
 
 
-        mMap.setOnMarkerClickListener(new OnMarkerClickListener() {
+        Map.setOnMarkerClickListener(new OnMarkerClickListener() {
             public boolean onMarkerClick(Marker marker) {
                 Toast.makeText(
                         MapsActivity.this,
@@ -128,18 +128,18 @@ public class MapsActivity extends android.support.v4.app.FragmentActivity {
 
 
 
-         punto = new MarkerOptions()
+        Map.addMarker(new MarkerOptions()
 
                 .position(new LatLng(-33.508659, -70.771587))
                 .title("Hospital Maipu")
                 .snippet("CRC Maipu")
-                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN));
-        mMap.addMarker(punto);
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN)));
 
 
 
 
-        mMap.addMarker(new MarkerOptions()
+
+        Map.addMarker(new MarkerOptions()
                         .position(new LatLng(-33.508659, -70.771587))
                         .title("Hospital Maipu")
                         .snippet("CRC Maipu")
@@ -147,7 +147,7 @@ public class MapsActivity extends android.support.v4.app.FragmentActivity {
 
         );
 
-        mMap.addMarker(new MarkerOptions()
+        Map.addMarker(new MarkerOptions()
                         .position(new LatLng(-33.525279, -70.763234))
                         .title("Tia Lucy")
                         .snippet("Fuente de Soda")
@@ -156,7 +156,7 @@ public class MapsActivity extends android.support.v4.app.FragmentActivity {
 
         );
 
-        mMap.addMarker(new MarkerOptions()
+        Map.addMarker(new MarkerOptions()
                         .position(new LatLng(-33.523079, -70.755816))
                         .title("Aereotel")
                         .snippet("Motel Aereotel")
@@ -165,14 +165,14 @@ public class MapsActivity extends android.support.v4.app.FragmentActivity {
 
         );
 
-        mMap.addMarker(new MarkerOptions()
+        Map.addMarker(new MarkerOptions()
                         .position(new LatLng(-33.513025, -70.756545))
                         .title("Unimarc")
                         .snippet("Supermercado Unimarc")
                         .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE))
 
         );
-        mMap.addMarker(new MarkerOptions()
+        Map.addMarker(new MarkerOptions()
                         .position(new LatLng(-33.418493, -70.601307))
                         .title("McDonald")
                         .snippet("Restaurant comida Rapida")
@@ -180,15 +180,8 @@ public class MapsActivity extends android.support.v4.app.FragmentActivity {
 
         );
 
-        remover = (Button) findViewById(R.id.btmarcadores);
-        remover.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-                Toast.makeText(MapsActivity.this, "Detalle de marcador:\n", Toast.LENGTH_SHORT).show();
-                mMap.addMarker(punto).setVisible(false);
-            }
-        });
+
 
 // GPS??
 

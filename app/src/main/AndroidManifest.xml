@@ -49,7 +49,7 @@
             android:label="Mochileros" >
         </activity>
         <activity
-            android:name=".Rclave"
+            android:name=".Recuperar_Clave"
             android:label="Recupera tu Clave" >
         </activity>
         <activity

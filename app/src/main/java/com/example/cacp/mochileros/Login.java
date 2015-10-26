@@ -75,7 +75,7 @@ public class Login extends ActionBarActivity {
         //    String User = CajaTextoUser.getText().toString(); //captura el texto en una variable
         //  / Toast.makeText(this, "hola " + User, Toast.LENGTH_LONG).show();
 
-        Intent formrecclave = new Intent(Login.this, Rclave.class);
+        Intent formrecclave = new Intent(Login.this, Recuperar_Clave.class);
         startActivity(formrecclave);
 
         user = (EditText) findViewById(R.id.ET_Nombre);
