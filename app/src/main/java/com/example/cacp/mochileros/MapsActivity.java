@@ -62,8 +62,9 @@ public class MapsActivity extends android.support.v4.app.FragmentActivity {
     PopupWindow popupWindow;
     public String lugar;
     public String p;
-  // Marker punto;
-  MarkerOptions punto;
+     Marker punto;
+    int c=0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -75,9 +76,7 @@ public class MapsActivity extends android.support.v4.app.FragmentActivity {
             public void onMapClick(LatLng point) {
 
                 Projection proj = mMap.getProjection();
-
                 Point coord = proj.toScreenLocation(point);
-
 
                 Toast.makeText(
                         MapsActivity.this,
@@ -93,8 +92,9 @@ public class MapsActivity extends android.support.v4.app.FragmentActivity {
             public void onMapLongClick(LatLng point) {
                 Projection proj = mMap.getProjection();
                 Point coord = proj.toScreenLocation(point);
+                if(c==0){
 
-                mMap.addMarker(new MarkerOptions()
+                punto = mMap.addMarker(new MarkerOptions()
                                 .position(new LatLng(point.latitude, point.longitude))
                                 .title("Lugar pulsado")
                                 .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED))
@@ -106,7 +106,12 @@ public class MapsActivity extends android.support.v4.app.FragmentActivity {
 
                     }
                 });
-
+                    c++;
+                }
+                else{
+                    punto.remove();
+                    c--;
+                }
 
             }
         });
@@ -124,19 +129,12 @@ public class MapsActivity extends android.support.v4.app.FragmentActivity {
             }
         });
 
-
-
-
-
         Map.addMarker(new MarkerOptions()
 
                 .position(new LatLng(-33.508659, -70.771587))
                 .title("Hospital Maipu")
                 .snippet("CRC Maipu")
                 .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN)));
-
-
-
 
 
         Map.addMarker(new MarkerOptions()
@@ -412,7 +410,7 @@ public class MapsActivity extends android.support.v4.app.FragmentActivity {
 
      //  Intent formmap = new Intent(MapsActivity.this, Popup.class);
     //   startActivity(formmap);
-
+mMap.clear();
 
 
 //////////// fin pop up /////////////////////

@@ -84,6 +84,10 @@ public class Login extends ActionBarActivity {
         user.setText("");
         pass.setText("");
     }
+    public void RegistrarFacebookOnClick(View v){
+
+
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
