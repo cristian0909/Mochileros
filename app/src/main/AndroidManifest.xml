@@ -99,14 +99,21 @@
 
             android:name=".Popup"
             android:label="@string/title_activity_maps" >
-
         </activity>
+
         <activity
 
             android:name=".Templo"
             android:label="@string/title_activity_maps" >
 
         </activity>
+        <activity
+
+            android:name=".Enviar_Lugar_Fin"
+            android:label="@string/title_activity_maps" >
+
+        </activity>
+
         <ListView
             android:id="@+id/list"
             android:layout_height="wrap_content"

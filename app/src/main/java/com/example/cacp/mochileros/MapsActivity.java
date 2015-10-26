@@ -92,7 +92,10 @@ public class MapsActivity extends android.support.v4.app.FragmentActivity {
             public void onMapLongClick(LatLng point) {
                 Projection proj = mMap.getProjection();
                 Point coord = proj.toScreenLocation(point);
-                if(c==0){
+
+                if(c==1){
+                    punto.remove();
+                }
 
                 punto = mMap.addMarker(new MarkerOptions()
                                 .position(new LatLng(point.latitude, point.longitude))
@@ -102,18 +105,32 @@ public class MapsActivity extends android.support.v4.app.FragmentActivity {
                 );
                 mMap.setOnCameraChangeListener(new OnCameraChangeListener() {
                     public void onCameraChange(CameraPosition position) {
+                    }
+                });
 
+                if(c==0){
+                    c++;
+
+                }
+
+                mMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
+
+                    @Override
+                    public void onInfoWindowClick(Marker marker) {
+
+                        Intent i = new Intent(MapsActivity.this, Enviar_Lugar_Fin.class);
+                        i.putExtra("titulo", marker.getTitle() + "");
+
+                        startActivity(i);
+
+
+                        Toast.makeText(MapsActivity.this, "Detalle de marcador:\n" + marker.getSnippet(), Toast.LENGTH_SHORT).show();
 
                     }
                 });
-                    c++;
-                }
-                else{
-                    punto.remove();
-                    c--;
-                }
-
             }
+
+
         });
 
 
@@ -216,11 +233,7 @@ public class MapsActivity extends android.support.v4.app.FragmentActivity {
                     dialogo1.show();
                 }
 
-
-
 /////////////// finaliza gps
-
-
 
         LocationManager locman = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         location = locman.getLastKnownLocation(LocationManager.GPS_PROVIDER);
@@ -254,8 +267,6 @@ public class MapsActivity extends android.support.v4.app.FragmentActivity {
                     gps.showSettingsAlert();
                 }
 
-
-
             mapa.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
                 @Override
                 public boolean onMarkerClick(Marker marker) {
@@ -284,8 +295,6 @@ public class MapsActivity extends android.support.v4.app.FragmentActivity {
 
             }
         });
-
-
     }
 ///////////////////punto mapa
 
@@ -377,8 +386,6 @@ public class MapsActivity extends android.support.v4.app.FragmentActivity {
     private void setUpMap() {
 
         onMapReady(mMap);
-
-
 
 
     }
