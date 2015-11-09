@@ -5,9 +5,11 @@
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="400dp"
-        android:background="@drawable/marcadores"
-        android:layout_margin="10dp"></FrameLayout>
+        android:layout_height="440dp"
+        android:background="@drawable/popup_marcadores"
+        android:layout_margin="10dp"
+        android:layout_marginLeft="10dp"
+        ></FrameLayout>
 
     <Button
         android:layout_width="200dp"

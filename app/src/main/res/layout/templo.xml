@@ -30,57 +30,29 @@
 
         >
 
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Valoracion:"
             android:textSize="20dp"
-            android:layout_marginRight="30dp"
+            android:layout_marginRight="20dp"
             android:layout_marginTop="17dp"
 
             android:textColor="#fff"
             />
-        <ImageButton
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:id="@+id/starta1"
-            android:layout_marginTop="17dp"
-            android:background="@drawable/estrella1"
 
-            />
-        <ImageButton
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:id="@+id/starta2"
-            android:layout_marginTop="17dp"
-            android:background="@drawable/estrella1"
+        <RatingBar
+            android:layout_marginTop="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ratingBar"
+            android:numStars="5"
+            android:rating="4.5"
 
-            />
-        <ImageButton
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:id="@+id/starta3"
-            android:layout_marginTop="17dp"
-            android:background="@drawable/estrella1"
-
-            />
-        <ImageButton
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:id="@+id/starta4"
-            android:layout_marginTop="17dp"
-            android:background="@drawable/estrella1"
-
-            />
-        <ImageButton
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:id="@+id/starta5"
-            android:layout_marginTop="17dp"
-            android:background="@drawable/estrella0"
-
-            />
+            android:clickable="false"
+            android:focusable="false" />
 
 
             />
@@ -111,53 +83,15 @@
 
         android:textColor="#fff"
         />
-        <ImageButton
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:id="@+id/start1"
-            android:layout_marginTop="17dp"
+             <RatingBar
+                 android:layout_marginTop="6dp"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:id="@+id/ratingBar2"
+                 android:numStars="5"
 
 
-            />
-        <ImageButton
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:id="@+id/start2"
-            android:layout_marginTop="17dp"
-
-            />
-        <ImageButton
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:id="@+id/start3"
-            android:layout_marginTop="17dp"
-
-            />
-        <ImageButton
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:id="@+id/start4"
-            android:layout_marginTop="17dp"
-
-            />
-        <ImageButton
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:id="@+id/start5"
-            android:layout_marginTop="17dp"
-
-            />
-        <ImageButton
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:id="@+id/mas"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="7dp"
-            android:background="@drawable/mas"
-            android:onClick="masOnClick"
-
-
-            />
+                 />
 
 </LinearLayout>
 
@@ -242,11 +176,12 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:id="@+id/textView33"
             android:text="Muy buena la wea por la xuxa"
+            android:textColor="#fff"
             android:layout_gravity="center_horizontal"
             android:layout_marginLeft="7dp"
             android:layout_marginRight="3dp"
             android:layout_marginBottom="5dp"
-            android:background="@drawable/comentarios1"
+            android:background="@drawable/comentarios2"
             android:padding="5dp"/>
         <TextView
             android:layout_width="fill_parent"
@@ -254,34 +189,37 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:id="@+id/textView34"
             android:text="Agradable citio, todo muy tranquilo"
+            android:textColor="#fff"
             android:layout_gravity="center_horizontal"
             android:layout_marginLeft="7dp"
             android:layout_marginRight="3dp"
             android:layout_marginBottom="5dp"
-            android:background="@drawable/comentarios1"
+            android:background="@drawable/comentarios2"
             android:padding="5dp"/>
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:id="@+id/textView35"
-            android:text="Comentario 1"
+            android:text="Comentario 3"
+            android:textColor="#fff"
             android:layout_gravity="center_horizontal"
             android:layout_marginLeft="7dp"
             android:layout_marginRight="3dp"
             android:layout_marginBottom="5dp"
-            android:background="@drawable/comentarios1"
+            android:background="@drawable/comentarios2"
             android:padding="5dp"/>
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Comentario 1"
+            android:text="Comentario 4"
+            android:textColor="#fff"
             android:layout_gravity="center_horizontal"
             android:layout_marginLeft="7dp"
             android:layout_marginRight="3dp"
             android:layout_marginBottom="5dp"
-            android:background="@drawable/comentarios1"
+            android:background="@drawable/comentarios2"
             android:padding="5dp"
             />
 
@@ -289,36 +227,39 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Comentario 1"
+                android:text="Comentario 5"
                 android:layout_gravity="center_horizontal"
+                android:textColor="#fff"
                 android:layout_marginLeft="7dp"
                 android:layout_marginRight="3dp"
                 android:layout_marginBottom="5dp"
-                android:background="@drawable/comentarios1"
+                android:background="@drawable/comentarios2"
                 android:padding="5dp"
                 />
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Comentario 1"
+                android:text="Comentario 6"
+                android:textColor="#fff"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginLeft="7dp"
                 android:layout_marginRight="3dp"
                 android:layout_marginBottom="5dp"
-                android:background="@drawable/comentarios1"
+                android:background="@drawable/comentarios2"
                 android:padding="5dp"
                 />
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Comentario 1"
+                android:text="Comentario 7"
+                android:textColor="#fff"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginLeft="7dp"
                 android:layout_marginRight="3dp"
                 android:layout_marginBottom="5dp"
-                android:background="@drawable/comentarios1"
+                android:background="@drawable/comentarios2"
                 android:padding="5dp"
                 />
 
@@ -328,20 +269,22 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Comentario 1"
+                android:text="Comentario 8"
+                android:textColor="#fff"
                 android:layout_gravity="center_horizontal"
                 android:layout_margin="3dp"
-                android:background="@drawable/comentarios1"
+                android:background="@drawable/comentarios2"
                 android:padding="5dp"
             />
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Comentario 1"
+                android:text="Comentario 9"
+                android:textColor="#fff"
                 android:layout_gravity="center_horizontal"
                 android:layout_margin="3dp"
-                android:background="@drawable/comentarios1"
+                android:background="@drawable/comentarios2"
                 android:padding="5dp"
                 />
 

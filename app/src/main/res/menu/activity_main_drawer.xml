@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_map" android:icon="@android:drawable/ic_menu_mylocation"
+            android:title="Mapa" />
+        <item android:id="@+id/nav_favorito" android:icon="@android:drawable/ic_menu_myplaces"
+            android:title="Favoritos" />
+        <item android:id="@+id/nav_perfil" android:icon="@android:drawable/ic_menu_edit"
+            android:title="Perfil" />
+        <item android:id="@+id/nav_consejos" android:icon="@android:drawable/ic_menu_agenda"
+            android:title="Consejos" />
+        <item android:id="@+id/nav_clima" android:icon="@android:drawable/ic_menu_mapmode"
+            android:title="Clima" />
+        <item android:id="@+id/nav_moneda" android:icon="@android:drawable/ic_menu_sort_by_size"
+            android:title="Conversor Monedas $" />
+
+    </group>
+
+
+
+    <item android:title="Ayuda">
+        <menu>
+            <item android:id="@+id/nav_acercade" android:icon="@android:drawable/ic_menu_help"
+                android:title="Acerca de" />
+
+
+        <item android:id="@+id/nav_descarga" android:icon="@android:drawable/ic_menu_upload"
+            android:title="Descarga Manual" />
+        </menu>
+    </item>
+
+
+
+</menu>

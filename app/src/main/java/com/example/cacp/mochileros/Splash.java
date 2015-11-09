@@ -30,7 +30,7 @@ public class Splash extends Activity {
         new Handler().postDelayed(new Runnable(){
             public void run(){
                 // Cuando pasen los 2 segundos, pasamos a la actividad principal de la aplicación
-                Intent intent = new Intent(Splash.this, Home.class);
+                Intent intent = new Intent(Splash.this,Login.class);
                 startActivity(intent);
                 finish();
             };

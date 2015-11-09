@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,12 +20,13 @@ import android.widget.Toast;
  * Created by CACP on 29-09-2015.
  */
 public class Templo extends ActionBarActivity {
-   ImageButton img1, img2, img3, img4, img5;
     Button valorar;
     EditText comentario;
     Button enviar;
-    int conteo = 1, valor=0, comen=0;
+    int comen=0;
+    long l=4;
     TextView lugar;
+    private RatingBar rb, rb1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,19 +35,16 @@ public class Templo extends ActionBarActivity {
         comentario = (EditText) findViewById(R.id.edcomentario);
         enviar = (Button) findViewById(R.id.enviarcomentario);
         enviar.setEnabled(false);
+        rb= (RatingBar) findViewById(R.id.ratingBar);
+        rb.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+            @Override
+            public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
+                ratingBar.setFocusableInTouchMode(true);
+                ratingBar.setClickable(true);
+                ratingBar.setRating(4);
 
-        img1 = (ImageButton) findViewById(R.id.start1);
-        img2 = (ImageButton) findViewById(R.id.start2);
-        img3 = (ImageButton) findViewById(R.id.start3);
-        img4 = (ImageButton) findViewById(R.id.start4);
-        img5 = (ImageButton) findViewById(R.id.start5);
-
-        img1.setBackgroundResource(R.drawable.estrella0);
-        img2.setBackgroundResource(R.drawable.estrella0);
-        img3.setBackgroundResource(R.drawable.estrella0);
-        img4.setBackgroundResource(R.drawable.estrella0);
-        img5.setBackgroundResource(R.drawable.estrella0);
-
+            }
+        });
 
         valorar= (Button) findViewById(R.id.ingvaloracion);
         lugar= (TextView) findViewById(R.id.lugar);
@@ -55,67 +54,15 @@ public class Templo extends ActionBarActivity {
 
     }
 
-    public void masOnClick(View v) {
-
-if(valor==0) {
-    if (conteo == 1) {
-
-        img1.setBackgroundResource(R.drawable.estrella1);
-        conteo++;
-    } else if (conteo == 2) {
-        img2.setBackgroundResource(R.drawable.estrella1);
-        conteo++;
-    } else if (conteo == 3) {
-        img3.setBackgroundResource(R.drawable.estrella1);
-        conteo++;
-    } else if (conteo == 4) {
-        img4.setBackgroundResource(R.drawable.estrella1);
-        conteo++;
-
-    } else if (conteo == 5) {
-        img5.setBackgroundResource(R.drawable.estrella1);
-        conteo++;
-    } else if (conteo > 5) {
-
-        conteo = 1;
-
-        img1.setBackgroundResource(R.drawable.estrella0);
-        img2.setBackgroundResource(R.drawable.estrella0);
-        img3.setBackgroundResource(R.drawable.estrella0);
-        img4.setBackgroundResource(R.drawable.estrella0);
-        img5.setBackgroundResource(R.drawable.estrella0);
-    }
-}else{
-
-    Toast.makeText(this, "Ya se envio la valorizacion", Toast.LENGTH_LONG).show();
-
-}
-    }
-
     public void ingresarvaloracionOnClick(View v){
-        if(valor == 0){
 
-            img1 = (ImageButton) findViewById(R.id.start1);
-            img2 = (ImageButton) findViewById(R.id.start2);
-            img3 = (ImageButton) findViewById(R.id.start3);
-            img4 = (ImageButton) findViewById(R.id.start4);
-            img5 = (ImageButton) findViewById(R.id.start5);
-
-            img1.setBackgroundResource(R.drawable.estrella0);
-            img2.setBackgroundResource(R.drawable.estrella0);
-            img3.setBackgroundResource(R.drawable.estrella0);
-            img4.setBackgroundResource(R.drawable.estrella0);
-            img5.setBackgroundResource(R.drawable.estrella0);
-
-
-            conteo=0;
-            valor=1;
             valorar.setEnabled(false);
             Toast.makeText(this, "Valoracon enviada", Toast.LENGTH_LONG).show();
 
-        }
+
 
     }
+
     public void igresoComentarioOnClick(View v){
        if(comen==0){
         comentario.setVisibility(View.VISIBLE);

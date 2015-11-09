@@ -52,10 +52,10 @@ import java.util.Locale;
 
 public class MapsActivity extends android.support.v4.app.FragmentActivity {
 
-    GoogleMap mMap,Map =null; // Might be null if Google Play services APK is not available.
+    GoogleMap Map =null, mapa; // Might be null if Google Play services APK is not available.
     Location location=null;
     GPSTracker gps;
-    Button btn_Abrir_Popup;
+    Button sujerir;
     Button  remover;
     LayoutInflater layoutInflater;
     View popupView;
@@ -63,75 +63,18 @@ public class MapsActivity extends android.support.v4.app.FragmentActivity {
     public String lugar;
     public String p;
      Marker punto;
-    int c=0;
+    int c=0, info=1;
+    double la=0.0,lo=0.0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
-        mMap = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map)).getMap();
+
         Map = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map)).getMap();
+        mapa = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map)).getMap();
+        mapa.setMyLocationEnabled(true);
 
-        mMap.setOnMapClickListener(new OnMapClickListener() {
-            public void onMapClick(LatLng point) {
-
-                Projection proj = mMap.getProjection();
-                Point coord = proj.toScreenLocation(point);
-
-                Toast.makeText(
-                        MapsActivity.this,
-                        "Lugar Escogido\n" +
-                                "Lat: " + point.latitude + "\n" +
-                                "Lng: " + point.longitude + "\n",
-                        Toast.LENGTH_SHORT).show();
-
-            }
-        });
-
-        mMap.setOnMapLongClickListener(new OnMapLongClickListener() {
-            public void onMapLongClick(LatLng point) {
-                Projection proj = mMap.getProjection();
-                Point coord = proj.toScreenLocation(point);
-
-                if(c==1){
-                    punto.remove();
-                }
-
-                punto = mMap.addMarker(new MarkerOptions()
-                                .position(new LatLng(point.latitude, point.longitude))
-                                .title("Lugar pulsado")
-                                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED))
-
-                );
-                mMap.setOnCameraChangeListener(new OnCameraChangeListener() {
-                    public void onCameraChange(CameraPosition position) {
-                    }
-                });
-
-                if(c==0){
-                    c++;
-
-                }
-
-                mMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
-
-                    @Override
-                    public void onInfoWindowClick(Marker marker) {
-
-                        Intent i = new Intent(MapsActivity.this, Enviar_Lugar_Fin.class);
-                        i.putExtra("titulo", marker.getTitle() + "");
-
-                        startActivity(i);
-
-
-                        Toast.makeText(MapsActivity.this, "Detalle de marcador:\n" + marker.getSnippet(), Toast.LENGTH_SHORT).show();
-
-                    }
-                });
-            }
-
-
-        });
 
 
 
@@ -240,8 +183,6 @@ public class MapsActivity extends android.support.v4.app.FragmentActivity {
 
 
 
-        GoogleMap mapa = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map)).getMap();
-        mapa.setMyLocationEnabled(true);
 
 
                 gps = new GPSTracker(MapsActivity.this);
@@ -279,22 +220,85 @@ public class MapsActivity extends android.support.v4.app.FragmentActivity {
                     return false;
                 }
             });
-
+//------------------           Templo
         mapa.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
-
             @Override
             public void onInfoWindowClick(Marker marker) {
+       //         Toast.makeText(MapsActivity.this, ""+info,Toast.LENGTH_SHORT).show();
 
+                if(info != 0){
                 Intent i = new Intent(MapsActivity.this, Templo.class);
                i.putExtra("titulo", marker.getTitle() + "");
 
                 startActivity(i);
+                }
 
-
-                Toast.makeText(MapsActivity.this, "Detalle de marcador:\n" + marker.getSnippet(), Toast.LENGTH_SHORT).show();
+               // Toast.makeText(MapsActivity.this, "Detalle de marcador:\n" + marker.getSnippet(), Toast.LENGTH_SHORT).show();
 
             }
         });
+//------------------           Click
+
+        mapa.setOnMapClickListener(new OnMapClickListener() {
+            public void onMapClick(LatLng point) {
+                if(c != 0){
+                    punto.remove();
+                }
+
+                sujerir = (Button) findViewById(R.id.btsujerir);
+                sujerir.setVisibility(View.GONE);
+
+                Projection proj = mapa.getProjection();
+
+                Point coord = proj.toScreenLocation(point);
+/*
+                Toast.makeText(
+                        MapsActivity.this,
+                        "Lugar Escogido\n" +
+                                "Lat: " + point.latitude + "\n" +
+                                "Lng: " + point.longitude + "\n",
+                        Toast.LENGTH_SHORT).show();*/
+
+
+                info =1;
+            }
+
+        });
+
+        mapa.setOnMapLongClickListener(new OnMapLongClickListener() {
+            public void onMapLongClick(LatLng point) {
+                Projection proj = mapa.getProjection();
+                Point coord = proj.toScreenLocation(point);
+                la = point.latitude;
+                lo = point.longitude;
+                if (c == 1) {
+                    punto.remove();
+                }
+                punto = mapa.addMarker(new MarkerOptions()
+                                .position(new LatLng(point.latitude, point.longitude))
+                                .title("Lugar pulsado")
+                                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED))
+
+                );
+                Map.setOnCameraChangeListener(new OnCameraChangeListener() {
+                    public void onCameraChange(CameraPosition position) {
+                    }
+                });
+
+                if (c == 0) {
+                    c++;
+                }
+                ////////////////////////on long click post //////////////////7
+
+                sujerir = (Button) findViewById(R.id.btsujerir);
+                sujerir.setVisibility(View.VISIBLE);
+                info =0;
+             //   Toast.makeText(MapsActivity.this, ""+info,Toast.LENGTH_SHORT).show();
+            }
+
+
+        });
+
     }
 ///////////////////punto mapa
 
@@ -322,7 +326,7 @@ public class MapsActivity extends android.support.v4.app.FragmentActivity {
 
     private void mostrarMarcador(double lat, double lng)
     {
-        mMap.addMarker(new MarkerOptions()
+        Map.addMarker(new MarkerOptions()
                 .position(new LatLng(lat, lng))
                 .title("Pais: España"));
     }
@@ -372,12 +376,12 @@ public class MapsActivity extends android.support.v4.app.FragmentActivity {
 
     private void setUpMapIfNeeded() {
         // Do a null check to confirm that we have not already instantiated the map.
-        if (mMap == null) {
+        if (Map == null) {
             // Try to obtain the map from the SupportMapFragment.
-            mMap = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map))
+            Map = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map))
                     .getMap();
             // Check if we were successful in obtaining the map.
-            if (mMap != null) {
+            if (Map != null) {
                 setUpMap();
             }
         }
@@ -385,7 +389,7 @@ public class MapsActivity extends android.support.v4.app.FragmentActivity {
 
     private void setUpMap() {
 
-        onMapReady(mMap);
+        onMapReady(Map);
 
 
     }
@@ -415,15 +419,25 @@ public class MapsActivity extends android.support.v4.app.FragmentActivity {
 
         //////////// pop up /////////////////////
 
-     //  Intent formmap = new Intent(MapsActivity.this, Popup.class);
-    //   startActivity(formmap);
-mMap.clear();
-
-
+       Intent formmap = new Intent(MapsActivity.this, Popup.class);
+       startActivity(formmap);
 //////////// fin pop up /////////////////////
 
     }
-    public void aceptar() {
+    public void SujerirLugarOnclick(View v){
+punto.remove();
+        sujerir = (Button) findViewById(R.id.btsujerir);
+        sujerir.setVisibility(View.GONE);
+
+    //    Toast.makeText(this, ""+la, Toast.LENGTH_LONG).show();
+
+        Intent e = new Intent(MapsActivity.this, Enviar_Lugar_Fin.class);
+        e.putExtra("la",la);
+        e.putExtra("longitud", lo);
+        startActivity(e);
+
+    }
+    void aceptar() {
         Intent in = new Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS);
         startActivity(in);
 

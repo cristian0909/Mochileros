@@ -1,6 +1,174 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/bg1">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Sujerir Lugar"
+        android:textSize="30dp"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/lugar"
+        android:layout_marginBottom="0dp"
+        android:textColor="#fff"
+
+        />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="#80848484"
+        android:paddingLeft="10dp"
+        android:paddingBottom="20dp"
+
+        >
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Valoracion:"
+            android:textSize="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="17dp"
+
+            android:textColor="#fff"
+            />
+
+        <RatingBar
+            android:layout_marginTop="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ratingBar"
+            android:numStars="5"
+
+            />
+
+    </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Valor Final:"
+            android:textSize="20dp"
+            android:textColor="#fff"
+            android:layout_marginRight="20dp"
+            />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtratingvalor"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="20dp"
+                android:textColor="#fff"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+
+        >
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="220dp"
+        android:id="@+id/radioGroup"
+        android:background="#80FFFFFF"
+        android:paddingRight="5dp">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Centro de ayuda"
+            android:textSize="20dp"
+            android:id="@+id/radioButton"
+            android:layout_marginBottom="10dp"
+            android:textColor="#000" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alimentacion"
+            android:textSize="20dp"
+            android:id="@+id/radioButton2"
+            android:layout_marginBottom="10dp"
+            android:textColor="#000" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hospedaje"
+            android:textSize="20dp"
+            android:id="@+id/radioButton4"
+            android:layout_marginBottom="10dp"
+
+
+
+            android:textColor="#000" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Abastecimiento"
+            android:textSize="20dp"
+            android:id="@+id/radioButton5"
+            android:layout_marginBottom="10dp"
+
+            android:textColor="#000" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Turistico"
+            android:textSize="20dp"
+            android:id="@+id/radioButton3"
+            android:textColor="#000" />
+    </RadioGroup>
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="vertical">
+
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Reseña"
+    android:textSize="25dp"
+    android:layout_gravity="center_horizontal"
+    android:textColor="#fff"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/editText2"
+        android:layout_margin="9dp"
+        android:background="@drawable/borde"
+        android:gravity="top|left"
+         />
+       </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enviar Lugar"
+        android:id="@+id/btnSubmit"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center_horizontal" />
 
 </LinearLayout>

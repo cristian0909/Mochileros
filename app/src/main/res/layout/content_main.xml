@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior" tools:showIn="@layout/app_bar_main"
+    tools:context="com.example.cacp.mochileros.Home"
+    android:background="@drawable/bg8">
+    <ImageView
+        android:layout_width="280dp"
+        android:layout_height="110dp"
+        android:layout_centerHorizontal="true"
+        android:shadowColor="#DF0101"
+        android:src="@drawable/mo"
+        android:id="@+id/imgvlogo" />
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:layout_marginTop="150dp"
+
+        android:layout_centerHorizontal="true"
+        android:id="@+id/frameLayout">
+
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:text="Mapa"
+            android:layout_marginLeft="30dp"
+            android:id="@+id/btmaps"
+            android:layout_gravity="left|top"
+            android:onClick="mapaOnClick"
+            android:background="#CCD8D8D8"
+            />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:text="Favoritos"
+            android:id="@+id/btfavorito"
+            android:layout_gravity="right|top"
+            android:layout_marginRight="30dp"
+            android:onClick="favOnClick"
+            android:background="#CCD8D8D8"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:text="Perfil"
+            android:id="@+id/btperfil"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="30dp"
+            android:onClick="perfilOnClick"
+            android:background="#CCD8D8D8"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:text="Consejos"
+            android:id="@+id/btconsejo"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="30dp"
+            android:onClick="consejosOnClick"
+            android:background="#CCD8D8D8"
+            />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:text="Climas"
+            android:id="@+id/btclima"
+            android:layout_gravity="left|bottom"
+            android:layout_marginLeft="30dp"
+            android:onClick="climaOnClick"
+            android:background="#CCD8D8D8" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:text="Monedas $"
+            android:id="@+id/btmoneda"
+            android:layout_gravity="right|bottom"
+            android:layout_marginRight="30dp"
+            android:onClick="monedaOnClick"
+            android:background="#CCD8D8D8" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="17dp"
+        android:paddingTop="20dp"
+        android:layout_below="@+id/frameLayout">
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>
